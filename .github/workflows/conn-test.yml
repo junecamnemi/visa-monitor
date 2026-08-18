@@ -1,0 +1,11 @@
+name: Connectivity Test
+on: workflow_dispatch
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "--- DNS ---"
+          getent hosts www.visa.go.kr || echo "DNS FAIL"
+          echo "--- curl ---"
+          curl -sS -m 25 -o /dev/null -w "HTTP %{http_code} in %{time_total}s\n" https://www.visa.go.kr/ 2>&1 || echo "CURL FAIL: $?"
