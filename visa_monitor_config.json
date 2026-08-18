@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "target_passports": ["N03142840", "N02951834", "N03172055"],
+  "target_status_prefixes": [],
+  "target_status_equal": ["Accepted"],
+  "target_result_date_today": false,
+  "excluded_passports": [],
+  "interval_seconds": 1,
+  "notify_on_approval": true,
+  "notify_on_denial": true,
+  "send_certificate_to_telegram": true,
+  "send_certificate_to_slack": false,
+  "check_frequency_override": null
+}
